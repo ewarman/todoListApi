@@ -7,7 +7,7 @@ var express = require('express'),
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-uri = MONGODB_URI || 'mongodb://localhost/Tododb';
+uri = process.env.MONGODB_URI || 'mongodb://localhost/Tododb';
 mongoose.connect(uri);
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,4 +26,4 @@ app.use(function(req, res) {
 
 console.log('todo list RESTful API server started on: ' + port);
 console.log('using this mongodb instance: ' + uri);
-console.log(MONGODB_URI);
+console.log(process.env.MONGODB_URI;
