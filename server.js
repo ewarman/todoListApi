@@ -26,4 +26,4 @@ app.use(function(req, res) {
 
 console.log('todo list RESTful API server started on: ' + port);
 console.log('using this mongodb instance: ' + uri);
-console.log(process.env.MONGODB_URI;
+console.log(process.env.MONGODB_URI);
